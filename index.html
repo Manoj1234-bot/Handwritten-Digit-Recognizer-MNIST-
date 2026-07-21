@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digit Recognizer</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="page">
+  <div class="header">
+    <h1>🔢 Handwritten Digit Recognizer</h1>
+    <p class="subtitle">Draw a digit (0-9) and let the CNN predict it — powered by TensorFlow</p>
+  </div>
+
+  <div class="main-card">
+    <div class="canvas-section">
+      <canvas id="drawCanvas" width="280" height="280"></canvas>
+      <div class="canvas-actions">
+        <button id="clearBtn" class="secondary-btn">🗑️ Clear</button>
+        <button id="predictBtn" class="primary-btn">🔍 Predict</button>
+      </div>
+    </div>
+
+    <div class="result-section">
+      <div class="error" id="errorMsg"></div>
+      <div class="loader" id="loader">Analyzing...</div>
+
+      <div class="prediction-box" id="predictionBox">
+        <div class="predicted-digit" id="predictedDigit">--</div>
+        <div class="confidence-text" id="confidenceText"></div>
+      </div>
+
+      <div class="probability-list" id="probabilityList"></div>
+    </div>
+  </div>
+
+  <p class="credit">Developed by <strong>Manoj S</strong></p>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

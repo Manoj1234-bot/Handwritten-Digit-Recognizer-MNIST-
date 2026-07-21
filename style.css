@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  min-height: 100vh;
+  padding: 30px 16px;
+  color: #1f2937;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #c7c7cc;
+  font-size: 13px;
+}
+
+.main-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  justify-content: center;
+}
+
+.canvas-section {
+  text-align: center;
+}
+
+#drawCanvas {
+  border: 3px solid #1f2937;
+  border-radius: 10px;
+  cursor: crosshair;
+  background: #ffffff;
+  touch-action: none;
+}
+
+.canvas-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 11px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #232526, #414345);
+  color: white;
+  flex: 1;
+}
+
+.secondary-btn {
+  background: #f3f4f6;
+  color: #374151;
+  flex: 1;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+  opacity: 0.9;
+}
+
+.primary-btn:active, .secondary-btn:active {
+  transform: scale(0.98);
+}
+
+.result-section {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  min-height: 18px;
+  margin-bottom: 6px;
+}
+
+.loader {
+  display: none;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.loader.show {
+  display: block;
+}
+
+.prediction-box {
+  text-align: center;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.predicted-digit {
+  font-size: 56px;
+  font-weight: 800;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.confidence-text {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.probability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prob-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.prob-digit {
+  width: 16px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.prob-track {
+  flex: 1;
+  height: 8px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.prob-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #414345, #232526);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.prob-fill.top-prediction {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.prob-percent {
+  width: 42px;
+  text-align: right;
+  color: #6b7280;
+  font-size: 11px;
+}
+
+.credit {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #c7c7cc;
+}
+
+.credit strong {
+  color: #ffffff;
+}
